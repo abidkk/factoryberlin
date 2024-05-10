@@ -1,6 +1,10 @@
-*main {
+* {
   margin: 0px;
   padding: 0px;
+}
+
+.main {
+  border: 1px solid black;
 }
 
 .left-side {
@@ -43,7 +47,6 @@ video {
 .down-arrow {
   padding-top: 50px;
 }
-
 
 .menu-box {
   position: relative;
@@ -88,8 +91,8 @@ video {
   font-size: 20px;
 }
 a {
-  text-decoration: none; 
-  color: white; 
+  text-decoration: none;
+  color: white;
 }
 .btns {
   display: flex;
@@ -106,33 +109,91 @@ a {
   width: 200px;
 }
 
-
 /* Headline css */
 .headline-container {
-    overflow: hidden;
-    border: 1px solid black;
-  }
-  
-  .headline {
-    white-space: nowrap;
-    animation: scroll 20s linear infinite;
-    font-size: 40px;
+  overflow: hidden;
+  border: 1px solid black;
+}
 
+.headline {
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  font-size: 40px;
+}
+
+.headline span {
+  margin-right: 20px;
+}
+
+.network {
+  padding: 5rem 10rem;
+}
+
+.network-card {
+  border-radius: 10px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.card-head {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 50px;
+  padding: 10px;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.image-container {
+  width: 100%;
+  height: 500px;
+  background-image: url("path/to/your/image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.cards {
+  background-color: antiquewhite;
+  width: calc(50% - 20px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-group,
+.network {
+  padding: 5rem 10rem;
+}
+.card1,
+.card2 {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .headline span {
-    margin-right: 20px;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+}
+
 @media only screen and (min-width: 1025px) {
   .text-box {
     font-size: 50px;
@@ -154,11 +215,22 @@ a {
   }
 }
 
-
-
 /* Media Query */
 @media only screen and (max-width: 550px) {
   .text-box {
     font-size: 20px;
+  }
+
+  .card-group,
+  .network {
+    padding: 20px 10px;
+    margin: 0px;
+  }
+
+  .card-title {
+    font-size: 30px;
+
+    padding: 5px;
+    font-weight: 400;
   }
 }
