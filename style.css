@@ -44,35 +44,95 @@ video {
   padding-top: 50px;
 }
 
-/* Optional: Add styling for your content */
+
 .menu-box {
   position: relative;
   z-index: 1;
-  text-align: center;
   left: 40px;
   top: 10px;
   background-color: black;
   border: 1px solid white;
   width: 300px;
-  border-radius: 50px;
   padding: 10px;
+  border-radius: 20px;
+}
 
+.menu {
+  color: white;
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.input {
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1px solid white;
+  width: 260px;
+}
+.links {
+  padding-top: 20px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none; 
+  color: white; 
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+}
+.btn {
+  border: 0px;
+  border-radius: 20px;
+  background-color: white;
+  width: 200px;
 }
 
 
-.menu{
-    width: 300px;
-    border-radius: 50px;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-
-    /* gap: 30px; */
-    font-size: 20px;
-    /* padding: 10px 0px 0px 10px; */
+/* Headline css */
+.headline-container {
+    overflow: hidden;
+    border: 1px solid black;
+  }
   
-}
+  .headline {
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    font-size: 40px;
 
+  }
+  
+  .headline span {
+    margin-right: 20px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 @media only screen and (min-width: 1025px) {
   .text-box {
     font-size: 50px;
@@ -94,6 +154,9 @@ video {
   }
 }
 
+
+
+/* Media Query */
 @media only screen and (max-width: 550px) {
   .text-box {
     font-size: 20px;
